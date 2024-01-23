@@ -1,5 +1,6 @@
-# <h1 align="center">Hi 👋, I'm Sander Kerby Seide</h1>
-## <h3 align="center">Passionate Frontend Developer from Haiti</h3>
+<h1 align="center" id="dynamic-text" onload="typeAndDelete()">Hi 👋, I'm Sander Kerby Seide</h1>
+
+<h3 align="center">Passionate Frontend Developer from Haiti</h3>
 
 <p align="left"> 
   <img src="https://komarev.com/ghpvc/?username=sanderseide&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
@@ -50,3 +51,36 @@
 <p align="left"> 
   <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=sanderseide&" alt="GitHub Streak" />
 </p>
+
+<script>
+  // Function to type and delete text
+  function typeAndDelete() {
+    const textElement = document.getElementById('dynamic-text');
+    const text = "Hi 👋, I'm Sander Kerby Seide";
+    let index = 0;
+
+    function type() {
+      textElement.innerText = text.slice(0, index);
+      index++;
+
+      if (index > text.length) {
+        setTimeout(deleteText, 1000); // Wait for 1 second before deleting
+      } else {
+        setTimeout(type, 100); // Type next character after 100 milliseconds
+      }
+    }
+
+    function deleteText() {
+      textElement.innerText = text.slice(0, index);
+      index--;
+
+      if (index === 0) {
+        setTimeout(type, 1000); // Wait for 1 second before typing again
+      } else {
+        setTimeout(deleteText, 100); // Delete next character after 100 milliseconds
+      }
+    }
+
+    type(); // Start typing
+  }
+</script>
