@@ -12,11 +12,6 @@
   </a>
 </p>
 
-<p align="left"> 
-  <a href="https://twitter.com/" target="blank">
-    <img src="https://img.shields.io/twitter/follow/?logo=twitter&style=for-the-badge" alt="Twitter Follow" />
-  </a>
-</p>
 
 - 🔭 Currently working on **BEDEDICTION APP**
 - 👯 Looking to collaborate on **AI projects**
